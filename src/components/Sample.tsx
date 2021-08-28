@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography } from "@material-ui/core";
-import {SubmitHandler, useForm} from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 
 type Inputs = {
   example: string;

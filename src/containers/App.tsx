@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Container } from "@material-ui/core";
-import { Sample } from "../components/sample/Sample";
+import { Sample } from "../components/Sample";
+import { AddField } from "../components/AddField";
 
 export const App = () => {
   return (
@@ -12,6 +13,11 @@ export const App = () => {
       <Container maxWidth="sm">
         <Sample />
       </Container>
+
+      <Container maxWidth="sm">
+        <AddField />
+      </Container>
+
     </>
   );
 }
