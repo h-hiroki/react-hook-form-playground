@@ -1,10 +1,17 @@
 import React from 'react';
-import { Typography } from "@material-ui/core";
+import { Typography, Container } from "@material-ui/core";
+import { Sample } from "../components/sample/Sample";
 
 export const App = () => {
   return (
     <>
-      <Typography>App Container</Typography>
+      <Container maxWidth="sm">
+        <Typography>App Container</Typography>
+      </Container>
+
+      <Container maxWidth="sm">
+        <Sample />
+      </Container>
     </>
   );
 }
