@@ -8,8 +8,9 @@ import {
   Button,
   TextField,
 } from "@material-ui/core";
+import { Text } from "./inputs/Text";
 
-type Inputs = {
+export type Inputs = {
   text1: string;
   text2: string;
 }
@@ -22,22 +23,15 @@ export const SampleWithMaterialUI = () => {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Controller
+        {/* wrapper的なコンポーネントを切ったら不幸にしかならんかった。。。 */}
+        <Text
           control={control}
+          label="Example Field"
           name="text1"
           defaultValue="test"
+          placeholder="I am placeholder. when you input any value, I will disappear..."
           rules={{ required: true }}
-          render={({ field}) => (
-            <TextField
-              {...field}
-              label="Example Field"
-              fullWidth
-              margin="normal"
-              placeholder="I am placeholder. when you input any value, I will disappear..."
-              error={errors.text1 && true}
-              helperText={ errors.text1 && true ? 'This field is required' : ''}
-            />
-          )}
+          errors={errors}
         />
         <Controller
           control={control}
